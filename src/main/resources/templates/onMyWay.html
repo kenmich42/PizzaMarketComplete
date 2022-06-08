@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: template (~{:: .uk-section})}">
+<head>
+</head>
+<body>
+        <div class="uk-section">
+                <span style="color: black">
+                        <i class="fa-solid fa-truck-fast fa-8x uk-align-center"></i>
+                        <p style="font-size:330%;" class="uk-text-center">Zamówienie już do <br> Ciebie jedzie!</p>
+                </span>
+                <div class="uk-text-center">
+                        <a class="uk-button uk-button-secondary" th:href="@{/menu}">POWRÓT DO MENU</a>
+                </div>
+        </div>
+</body>
+</html>

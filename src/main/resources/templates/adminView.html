@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: template (~{:: .uk-section})}">
+<head>
+</head>
+<body>
+
+<div class="uk-section">
+    <div class="uk-container uk-container-small">
+        <h1 class="uk-heading-bullet">Zamówienia</h1>
+
+        <table class="uk-table uk-table-striped">
+
+            <tbody>
+            <tr th:each="order : ${orders}">
+                <td>
+                    <div class="uk-text-bold" th:text="${order.getOrderAddress().getFirstName()} + ' ' + ${order.getOrderAddress().getLastName()}"></div>
+                    <div class="uk-text-normal" th:text="${order.getOrderAddress().getStreet()}"></div>
+                    <div class="uk-text-normal" th:text="${order.getOrderAddress().getPostalCode()} + ' ' + ${order.getOrderAddress().getCity()}"></div>
+                </td>
+                <td class="uk-text-bolder uk-text-right" th:text="${order.getPizzaName()}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+</body>
+</html>
