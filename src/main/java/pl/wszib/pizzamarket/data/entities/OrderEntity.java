@@ -15,6 +15,7 @@ public class OrderEntity {
     @JoinColumn(name = "order_address_id")
     private OrderAddressEntity orderAddress;
 
+
     public Long getId() {
         return id;
     }
